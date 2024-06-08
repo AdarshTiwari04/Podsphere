@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { HomeRounded,CloseRounded} from "@mui/icons-material"
-import LogoImage from "../Images/Logo.npg";
+import { HomeRounded,CloseRounded, SearchRounded, FavoriteRounded, UploadRounded, LightModeRounded, LogoutRounded} from "@mui/icons-material"
+import LogoImage from "../Images/Logo.png";
+import { Link } from "react-router-dom";
+
 const MenuContainer = styled.div`
   flex:0.5;
   flex-direction: column;
@@ -40,6 +42,10 @@ font-size: 20px;
 margin: 16px 0px;
 
 `;
+const Image = styled.img`
+  height: 40px;
+`;
+
 const Close = styled.div`
 display: none;
 @media (max-width: 1100px){
@@ -56,28 +62,89 @@ align-items: center;
 gap: 12px;
 cursor: pointer;
 color : ${({ theme }) => theme.text_secondary};
-width; 100%;
 &:hover{
 background-color: ${({theme})=>theme.text_secondary+ 50};
 }
 `;
 const NavText = styled.div`
 padding: 12px 0px;
+text-decoration: none;
 `;
+
+const HR = styled.div`
+width: 100%;
+height: 1px;
+background-color: ${({ theme }) => theme.text_secondary + 80};
+margin: 10px 0px;
+`;
+
+const menuItems= [
+  {
+    link:"/",
+    name: "Dashboard",
+    icon: <HomeRounded />,
+  },
+
+  {
+    link:"/search",
+    name: "Search",
+    icon: <SearchRounded />,
+  },
+
+  {
+    link:"/favourties",
+    name: "Favourties",
+    icon: <FavoriteRounded />,
+  }
+];
+
+const button = [
+  {
+    fun:()=> console.log("Upload"),
+    name: "Upload",
+    icon: <UploadRounded />,
+  },
+
+  {
+    fun:()=> console.log("Light Mode"),
+    name: "Light Mode",
+    icon: <LightModeRounded />,
+  },
+
+  {
+    fun:()=> console.log("Log Out"),
+    name: "Log Out",
+    icon: <LogoutRounded />,
+  },
+];
 
 const Sidebar =() => {
   return (
   <MenuContainer>
     <Flex>
-    <Logo>PodSphere</Logo>
+    <Logo>
+      <Image src={LogoImage} />
+      PodSphere</Logo>
     <Close>
       <CloseRounded />
     </Close>
     </Flex>
+    {menuItems.map((items) =>
+    <Link to={items.link} style={{textDecoration:"none"}}>
     <Elements>
-      <HomeRounded />
-      <NavText>Dashboard</NavText>
+      {items.icon}
+      <NavText>{items.name}</NavText>
     </Elements>
+    </Link>
+  )}  
+   <HR />
+
+   {button.map((item) =>(
+    <Elements onClick={item.fun}>
+      {item.icon}
+      <NavText>{item.name}</NavText>
+    </Elements>
+  ))}
   </MenuContainer>
   );
 };
