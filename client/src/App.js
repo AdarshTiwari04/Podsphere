@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Search from "./pages/Search";
-import Favourites from "./pages/Favourites";
+import Favourites from "./pages/Favourites.jsx";
 import Profile from "./pages/Profile";
 import PodcastDetails from "./pages/PodcastDetails";
 import DisplayPodcast from "./pages/DisplayPodcast";

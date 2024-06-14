@@ -101,7 +101,7 @@ const Sidebar = ({ menuOpen, setMenuOpen, setDarkMode, darkMode }) => {
     },
 
     {
-      link: "/favourties",
+      link: "/favourites",
       name: "Favourties",
       icon: <FavoriteRounded />,
     },
