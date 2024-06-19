@@ -46,7 +46,16 @@ const Span = styled.div`
   }
 `;
 
-const Podcasts = styled.div``;
+const Podcasts = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 6px;
+  //center the items if only one item present
+  @media (max-width: 550px) {
+    justify-content: center;
+  }
+`;
 
 const Dashboard = () => {
   return (
