@@ -19,6 +19,14 @@ const NavBarDiv = styled.div`
   }
 `;
 
+const Welcome = styled.div`
+  font-size: 24px;
+  font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
 const ButtonDiv = styled.div`
   font-size: 14px;
   cursor: pointer;
@@ -42,6 +50,7 @@ const NavBar = ({ menuOpen, setMenuOpen }) => {
       <IcoButton>
         <Menu onClick={() => setMenuOpen(!menuOpen)} />
       </IcoButton>
+      <Welcome>Welcome, User!!</Welcome>
       <ButtonDiv>
         <PersonRounded />
         Login

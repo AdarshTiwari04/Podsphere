@@ -19,6 +19,13 @@ const DashboardMain = styled.div`
 const FilterContainer = styled.div`
   display: flex;
   flex-direction: column;
+  ${({ box, theme }) =>
+    box &&
+    `
+background-color: ${theme.bg};
+  border-radius: 10px;
+  padding: 20px 30px;
+`}
   background-color: ${({ theme }) => theme.bg};
   border-radius: 10px;
   padding: 20px 30px;
@@ -81,6 +88,20 @@ const Dashboard = () => {
         <Topic>
           Comedy
           <Link to={"/showpodcasts/comedy"} style={{ textDecoration: "none" }}>
+            <Span>Show All</Span>
+          </Link>
+        </Topic>
+        <Podcasts>
+          <PodcastCard />
+          <PodcastCard />
+          <PodcastCard />
+        </Podcasts>
+      </FilterContainer>
+
+      <FilterContainer>
+        <Topic>
+          News
+          <Link to={"/showpodcasts/news"} style={{ textDecoration: "none" }}>
             <Span>Show All</Span>
           </Link>
         </Topic>

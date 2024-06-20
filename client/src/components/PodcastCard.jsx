@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
 import { IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
@@ -24,7 +25,7 @@ const PlayIcon = styled.div`
   box-shadow: 0 0 16px 4px #9000ff50 !important;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
   position: relative;
   text-decoration: none;
   background-color: ${({ theme }) => theme.card};
@@ -154,7 +155,7 @@ const Views = styled.div`
 
 const PodcastCard = () => {
   return (
-    <Card>
+    <Card to={`/podcast/stgsrgsd`}>
       <div>
         <Top>
           <Favourite>
