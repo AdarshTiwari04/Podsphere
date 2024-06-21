@@ -63,7 +63,7 @@ const MoreResult = ({ podcast }) => {
       <PodcastInfo>
         <PodcastName>The Tim Ferriss Show</PodcastName>
         <Desciption>
-          <Creator style={{ marginRight: "12px" }}>Rishav</Creator>
+          <Creator style={{ marginRight: "12px" }}>Adarsh</Creator>
           <Time>• 12 Views</Time>
           <Time>• 12 days ago</Time>
         </Desciption>

@@ -174,8 +174,8 @@ const PodcastCard = () => {
             </Descryption>
             <CreatorInfo>
               <Creator>
-                <Avatar style={{ width: "26px", height: "26px" }}>R</Avatar>
-                <CreatorName>Rishav Chandra</CreatorName>
+                <Avatar style={{ width: "26px", height: "26px" }}>A</Avatar>
+                <CreatorName>Adarsh Tiwari</CreatorName>
               </Creator>
               <Views> 12 Views </Views>
             </CreatorInfo>

@@ -83,7 +83,7 @@ const TopResult = ({ podcast }) => {
       <UploadInfo>
         <Time>• 12 Views</Time>
         <Time>• 12 days ago</Time>
-        <CreatorName style={{ marginLeft: "18px" }}>Rishav</CreatorName>
+        <CreatorName style={{ marginLeft: "18px" }}>Adarsh</CreatorName>
       </UploadInfo>
       <Description>
         The Tim Ferriss Show is a podcast hosted by entrepreneur,and public
