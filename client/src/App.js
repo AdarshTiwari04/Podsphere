@@ -10,6 +10,8 @@ import Favourites from "./pages/Favourites.jsx";
 import Profile from "./pages/Profile";
 import PodcastDetails from "./pages/PodcastDetails";
 import DisplayPodcast from "./pages/DisplayPodcast";
+import AudioPlayer from "./components/AudioPlayer.jsx";
+import VideoPlayer from "./components/VideoPlayer.jsx";
 
 const Container = styled.div`
   display: flex;
